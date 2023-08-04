@@ -1,0 +1,2 @@
+// Install a new project using React:
+==> npx create-react-app <project name>

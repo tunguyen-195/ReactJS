@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        .btn{
+            display: inline-block;
+            padding: 0.5em 1em;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 0.25em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        button {
+            display: inline-block;
+            padding: 0.5em 1em;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 0.25em;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>
+
+<script type="text/babel">
+    // var item = React.createElement('div',{ className: 'post-item'},
+    // React.createElement('h2',{title: 'Học React tại F8'},'ReactJS'),
+    // React.createElement('p',null,'Học React từ cơ bản đến nâng cao')
+    // )
+
+    // var content =
+    //     (<div class="post-item">
+    //         <h2 title="Học React tại F8 ">ReactJS</h2>
+    //         <p>Học React từ cơ bản đến nâng cao</p>
+    //     </div>)
+
+
+
+    // var courses = [
+    //     { name: 'HTML,CSS' },
+    //     { name: 'Responsive web design' },
+    //     { name: 'ReactJS' }
+    // ]
+
+    // const CoursesList2 = (arr) => {
+    //     return '<div>' + arr.reduce((acc,{name})=> {return`${acc} <p> ${name} </p>`},'')+ '</div>'
+    // }
+
+    // const CoursesList = () => {
+    //     const Elements = courses.map(({name}) => (<p>{name}</p>))
+    //     return <div> {Elements} </div>
+    // }
+    // const domContainer = document.querySelector('#root')
+    // const root = ReactDOM.createRoot(domContainer)
+    // root.render(<CoursesList />)
+
+
+    // const CoursesList = () =>{
+    //     const Elements = courses.map(({name},idx)=>(<li key={idx}>{name}</li>))
+    //     return <ul> {Elements} </ul>
+    // }
+
+
+    // // root.render(<CoursesList />)
+
+    // const PostItem = () => {
+    //     return (
+    //         <div class="post-item">
+    //             <h2 class="post-title">C#</h2>
+    //             <h4 class="post-desc">Bạn có kiến thức</h4>
+    //             <p class="post-published">1 ngày trước</p>
+    //         </div>)
+    // }
+    // const app = (
+    //     <div id="posts-list">
+    //         <PostItem />
+    //     </div>
+    // )
+
+    // root.render(<PostItem />)
+
+
+
+   
+    const container = document.querySelector("#root")
+    const root = ReactDOM.createRoot(container)
+
+
+    const Button = ({title, href, onClick}) =>{
+        let Component = 'button'
+        const props = {}
+        if(href) {
+            Component = 'a'
+            props.href = href
+        }
+        if(onClick) props.onClick = onClick
+        // props.className = 'btn'
+
+        return (
+            <Component 
+            {...props}
+            className = 'btn'
+            > {title} 
+            </Component>
+        )
+    }
+
+
+    
+
+    const App = () => {
+        return (
+            <div class="wrapper">
+                {
+                    <Button 
+                    title = 'Click me !'
+                    href = 'google.com'
+                    onClick = {() => console.log(Math.random())}
+                    /> 
+                }
+            </div>
+        )
+    }
+    root.render(<App />)
+
+</script>
