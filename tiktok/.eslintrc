@@ -1,0 +1,15 @@
+{
+    "plugins": ["module-resolver"],
+
+    "rules": {
+        "module-resolver/use-alias": 2
+    },
+    "parserOptions": {
+        // "ecmaVersion": 2018,
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    }
+}
