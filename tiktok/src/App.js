@@ -9,13 +9,11 @@ function App() {
             <div className="App">
                 <Routes>
                     {publicRoutes.map((route, idx) => {
-
-                        let Layout = DefaultLayout
-                        if(route.layout){
-                          Layout = route.layout
-                        }
-                        else if(route.layout === null){
-                          Layout = Fragment
+                        let Layout = DefaultLayout;
+                        if (route.layout) {
+                            Layout = route.layout;
+                        } else if (route.layout === null) {
+                            Layout = Fragment;
                         }
                         //Cái này phải khai báo để tạo ra 1 component chứ không thể truyền tực tiếp vào được
                         //Nhớ quy tắc đặt tên component phải viết hoa chữ cái đầu
