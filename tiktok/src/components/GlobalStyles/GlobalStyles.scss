@@ -3,6 +3,7 @@
 :root {
     --primary: #fe2c55;
     --black: rgba(22, 24, 35, 1);
+    --white: #fff;
     --text-color: var(--black);
     //Default layout
     --default-layout-header-height: 60px;
@@ -27,12 +28,14 @@ body {
     color: var(--text-color);
 }
 
-button, input, [tabindex] {
+button,
+input,
+[tabindex] {
     outline: none;
     border: none;
 }
 
-a[href]{
+a[href] {
     color: var(--text-color);
     text-decoration: none;
 }

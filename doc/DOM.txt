@@ -1,2 +1,43 @@
 // Install a new project using React:
 ==> npx create-react-app <project name>
+
+// Dùng git để quay lại
+- Lấy hash commit code trên git phần muốn quay lại
+- trong repo mở cmd gõ git checkout <hashcode>
+
+// Cấu hình Prettier
+=> VScode => extension
+- Thêm file .prettierrc vào source code
+        + .pretierrc
+            {
+            "arrowParens": "always",
+            "bracketSameLine": false,
+            "bracketSpacing": true,
+            "embeddedLanguageFormatting": "auto",
+            "htmlWhitespaceSensitivity": "css",
+            "insertPragma": false,
+            "jsxSingleQuote": false,
+            "printWidth": 120,
+            "proseWrap": "preserve",
+            "quoteProps": "as-needed",
+            "requirePragma": false,
+            "semi": true,
+            "singleQuote": true,
+            "tabWidth": 4,
+            "useTabs": false,
+            "vueIndentScriptAndStyle": false
+            }
+
+- Tạo file .vscode/setting.json
+        + setting.json
+            {
+                "editor.formatOnSave": true,
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+            }
+
+// Cách để select nhiều đối tượng trong vscode
+- click vào đầu 1 thành phần có dấu hiệu chung
+- Ctrl + D để chọn các thành phần có điều chung khác
+- di chuyển qua thành phần chung tới các thành phần cần select
+- alt + shift + > : để select các thành phần cần select
+ 

@@ -1,0 +1,89 @@
+.wrapper {
+    // Để cho nếu có từ 2 nút cạnh nhau vẫn nằm trên 1 hàng duy nhất
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    padding: 9px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--white);
+    border: 1px solid transparent;
+    user-select: none;
+    + .wrapper {
+        margin-left: 8px;
+    }
+
+    // Put css configure here it wil have priority more than other
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+// Nếu để thế này thuộc tính sẽ ăn theo phần tử sau dấu cộng
+// Ví dụ .icon + title => title sẽ có margin-left: 8px;
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+
+.rounded {
+    //Đây là 1 tip giúp border radius bo đẹp mà không bị méo, đặt số lớn
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-color: rgba(22, 24, 35, 0.12);
+    background-color: rgba(255, 255, 255, 1);
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+
+    &:active {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(22, 24, 35, 0.06);
+    }
+}
+
+.primary {
+    color: var(--white);
+    background-color: var(--primary);
+    border-color: var(--primary);
+
+    &:hover {
+        border-color: var(--primary);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+    }
+}
+
+.outline {
+    color: var(--primary);
+    border-color: currentColor;
+
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.08);
+        border-color: var(--primary);
+    }
+}
+
+.small {
+    min-width: 86px;
+    padding: 4px 16px;
+}
+
+.large {
+    min-width: 140px;
+    padding: 14px 16px;
+}
+
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.custom-login {
+    color: rgba(22, 24, 35, 0.75);
+}
